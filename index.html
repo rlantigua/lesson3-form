@@ -39,75 +39,70 @@
         <input id="company" placeholder="Company CxA" type="text" required autocomplete="name">
       </label>
       <label for="addressLine1">Address Line 1
-        <input id="addressLine1" type="text" placeholder="China Town 25 Street">
+        <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line1">
       </label>
       <labe for="addressLine1"l>Address Line 2
-        <input id="addressLine1" type="text" placeholder="China Town 25 Street">
+        <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line2">
       </label>
       <label for="city"l>City
-        <input id="city" type="text" required autocomplete="name">
+        <input id="city" type="city" required autocomplete="shipping address-level2">
       </label>
       <label for="state">State/Province
-        <input id="state" type="text" required autocomplete="name">
+        <input id="state" type="state" required autocomplete="shipping address-level1">
       </label>
       <label for="postal-code">Postal Code
-        <input id="postal-code" type="text" required autocomplete="name">
+        <input id="postal-code" type="zip" required autocomplete="shipping postal-code">
       </label>
       <label for="coutry">Country
-        <input id="country" type="text" required autocomplete="name">
+        <input id="country" type="country" required autocomplete="shipping country">
       </label>
 
       <h3>Your Credit Card Information</h3>
       <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
-      <label for="credit-card">Credit Card Number
-        <input id="credit-card" type="text" maxlength="19" required placeholder="29514524578524" pattern="[0-9] {13,16}">
+      <label for="card-number">Credit Card Number
+        <input id="card-number" type="cardnumber" maxlength="19" required placeholder="29514524578524" pattern="[0-9] {13,16}" autocomplete="cc-number">
       </label>
-      <label>Credit Card Type
-        <input list="cardType" type="text" required>
-        <datalist id="cardType">
+      <label for="card-type">Credit Card Type
+        <input id="card-type" list="cardTypeList" type="card-type" required>
+        <datalist id="cardTypeList">
           <option value="Visa">
           <option value="American Express">
           <option value="Mastercard">
           <option value="Discover">
         </datalist>
       </label>
-      <label>Expiration Date
-        <input type="text" placeholder="MM/YY" required pattern="\d{2}\/\d{2}">
+      <label for="expiration-date">Expiration Date
+        <input id="expiration-date" type="exp-date" placeholder="MM/YY" required pattern="\d{2}\/\d{2}" autocomplete="cc-exp">
       </label>
-      <label>CVV
-        <input type="number" maxlength="3" required placeholder="111">
+      <label for="cvv">CVV
+        <input id="cvv" type="cvc" required placeholder="111" autocomplete="cc-csc">
       </label>
 
       <h3>Your Billing Address</h3>
-      <label>First Name
-        <input type="text">
+      <label for="shippingFullname">Full Name
+        <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
       </label>
-      <label>Middle Initial
-        <input type="text">
+
+      <label for="bill-company">Company
+        <input id="bill-company" placeholder="Company CxA" type="text" required autocomplete="name">
       </label>
-      <label>Last Name
-        <input type="text">
+      <label for="bill-addressLine1">Address Line 1
+        <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line1">
       </label>
-      <label>Company
-        <input type="text">
+      <labe for="addressLine1"l>Address Line 2
+        <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line2">
       </label>
-      <label>Address Line 1
-        <input type="text">
+      <label for="bill-city"l>City
+        <input id="bill-city" type="city" required autocomplete="billing address-level2">
       </label>
-      <label>Address Line 2
-        <input type="text">
+      <label for="bill-state">State/Province
+        <input id="bill-state" type="state" required autocomplete="billing address-level1">
       </label>
-      <label>City
-        <input type="text">
+      <label for="bill-postal-code">Postal Code
+        <input id="bill-postal-code" type="zip" required autocomplete="billing postal-code">
       </label>
-      <label>State/Province
-        <input type="text">
-      </label>
-      <label>Postal Code
-        <input type="text">
-      </label>
-      <label>Country
-        <input type="text">
+      <label for="bill-coutry">Country
+        <input id="bill-country" type="country" required autocomplete="billing country">
       </label>
     </section>
 
