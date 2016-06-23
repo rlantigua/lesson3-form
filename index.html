@@ -17,19 +17,6 @@
   </section>
   <form>
     <section class="form">
-      <h3>Your Name and Demographic Information</h3>
-      <label for="fullname">Full Name
-        <input id="fullname" placeholder="Full name" type="text" required autocomplete="name">
-      </label>
-
-      <label for="emailAdress">Email Address
-        <input id="emailAdress" placeholder="name@example.com" type="email" required autocomplete="email">
-      </label>
-
-      <label for="mailing-list">Put me on the mailing list?
-        <input id="mailing-list" class="inline" type="checkbox">
-      </label>
-
       <h3>Your Shipping Address</h3>
       <label for="shippingFullname">Full Name
         <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
@@ -41,8 +28,8 @@
       <label for="addressLine1">Address Line 1
         <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line1">
       </label>
-      <labe for="addressLine1"l>Address Line 2
-        <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line2">
+      <label for="addressLine2"l>Address Line 2
+        <input id="addressLine2" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line2">
       </label>
       <label for="city"l>City
         <input id="city" type="city" required autocomplete="shipping address-level2">
@@ -55,6 +42,18 @@
       </label>
       <label for="coutry">Country
         <input id="country" type="country" required autocomplete="shipping country">
+      </label>
+
+      <label for="emailAdress">Email Address
+        <input id="emailAdress" placeholder="name@example.com" type="email" required autocomplete="email">
+      </label>
+
+      <label for="mailing-list">Put me on the mailing list?
+        <input id="mailing-list" class="inline checkbox" type="checkbox">
+      </label>
+
+      <label for="emailAdress">Phone Number
+        <input id="emailAdress" placeholder="809-555-5555" type="tel" required autocomplete="email">
       </label>
 
       <h3>Your Credit Card Information</h3>
@@ -72,7 +71,7 @@
         </datalist>
       </label>
       <label for="expiration-date">Expiration Date
-        <input id="expiration-date" type="exp-date" placeholder="MM/YY" required pattern="\d{2}\/\d{2}" autocomplete="cc-exp">
+        <input id="expiration-date" type="month" placeholder="MM/YY" required autocomplete="cc-exp">
       </label>
       <label for="cvv">CVV
         <input id="cvv" type="cvc" required placeholder="111" autocomplete="cc-csc">
@@ -133,7 +132,7 @@
         </tr>
       </table>
       <label class="check-correct">Is your order correct?
-        <input type="checkbox">
+        <input type="checkbox" class="checkbox">
       </label>
       <input id="submit" type="submit">
     </section>
