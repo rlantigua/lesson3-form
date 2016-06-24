@@ -15,8 +15,29 @@
   <section class="progress-bar">
     Seems like this could be a good place for a progress bar...
   </section>
+
   <form>
     <section class="form">
+       <section class="order">
+        <h3>Your Order</h3>
+        <div class="item">
+          <p><span class="label">Product: </span><span> Game console 2015</span></p> 
+          <p><span class="label">Quantity: </span><span>1</span> </p>
+          <p><span class="label">Price: </span><span>$500</span> </p>
+        </div>
+        <div class="item">
+          <p><span class="label">Product: </span><span> Transformer 3D</span></p> 
+          <p><span class="label">Quantity: </span><span>2</span></p> 
+          <p><span class="label">Price: </span><span>$50</span> </p>
+        </div>
+        <div>
+          <span class="label">total:</span> $550
+        </div>
+        <label class="check-correct">Is your order correct?
+          <input type="checkbox" class="checkbox">
+        </label>
+      </section>
+
       <h3>Your Shipping Address</h3>
       <label for="shippingFullname">Full Name
         <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
@@ -103,39 +124,9 @@
       <label for="bill-coutry">Country
         <input id="bill-country" type="country" required autocomplete="billing country">
       </label>
-    </section>
-
-    <section class="order-review">
-      <h3>Your Order</h3>
-      <table class="your-order">
-        <tr class="headings">
-          <td>Product</td>
-          <td>Quantity</td>
-          <td>Price</td>
-          <td>Total</td>
-        </tr>
-        <tr>
-          <td>Game Console 2015</td>
-          <td>1</td>
-          <td>$500.00</td>
-          <td>$500.00</td>
-        </tr>
-        <tr>
-          <td>Platformer Bros 3D</td>
-          <td>1</td>
-          <td>$50.00</td>
-          <td>$50.00</td>
-        </tr>
-        <tr class="total">
-          <td>Total</td>
-          <td>$550.00</td>
-        </tr>
-      </table>
-      <label class="check-correct">Is your order correct?
-        <input type="checkbox" class="checkbox">
-      </label>
       <input id="submit" type="submit">
     </section>
+
    </form> 
   <script>
     var submit = document.querySelector('#submit');

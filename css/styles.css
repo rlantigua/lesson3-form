@@ -26,7 +26,7 @@ header {
     display: none;
   }
 
-  section.form {
+  section.order {
     padding-top: 50px;
   }
 }
@@ -59,7 +59,7 @@ header {
 
 @media screen and (min-width: 451px) {
   section.form {
-    font-size: 2em;
+    /*font-size: 2em;*/
   }
 
   .company-name {
@@ -70,7 +70,7 @@ header {
 }
 
 @media screen and (min-width: 651px) {
-  section.form {
+  section.order {
     padding-top: 100px;
   }
 }
@@ -145,4 +145,16 @@ tr:nth-child(even) {
 
 .check-correct {
   margin-top: 10px;
+}
+
+.order .label {
+  font-weight: bold;
+}
+
+.order .item {
+  border-bottom: 1px solid;
+}
+
+section.form input.checkbox {
+  display: inline;
 }
