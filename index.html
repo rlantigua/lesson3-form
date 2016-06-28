@@ -6,6 +6,7 @@
   <title>Quiz - One Big, Ugly Form</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script  src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -33,106 +34,110 @@
         <div>
           <span class="label">total:</span> $550
         </div>
-        <label class="check-correct">Is your order correct?
-          <input type="checkbox" class="checkbox">
+        <label for="correct-order" class="check-correct">Is your order correct?
+          <input id="correct-order" type="checkbox" class="checkbox">
         </label>
       </section>
 
-      <h3>Your Shipping Address</h3>
-      <label for="shippingFullname">Full Name
-        <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
-      </label>
+      <section id="your-info">
+        <h3>Your Shipping Address</h3>
+        <label for="shippingFullname">Full Name
+          <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
+        </label>
 
-      <label for="company">Company
-        <input id="company" placeholder="Company CxA" type="text" required autocomplete="name">
-      </label>
-      <label for="addressLine1">Address Line 1
-        <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line1">
-      </label>
-      <label for="addressLine2"l>Address Line 2
-        <input id="addressLine2" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line2">
-      </label>
-      <label for="city"l>City
-        <input id="city" type="city" required autocomplete="shipping address-level2">
-      </label>
-      <label for="state">State/Province
-        <input id="state" type="state" required autocomplete="shipping address-level1">
-      </label>
-      <label for="postal-code">Postal Code
-        <input id="postal-code" type="zip" required autocomplete="shipping postal-code">
-      </label>
-      <label for="coutry">Country
-        <input id="country" type="country" required autocomplete="shipping country">
-      </label>
+        <label for="company">Company
+          <input id="company" placeholder="Company CxA" type="text" required autocomplete="name">
+        </label>
+        <label for="addressLine1">Address Line 1
+          <input id="addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line1">
+        </label>
+        <label for="addressLine2"l>Address Line 2
+          <input id="addressLine2" type="address" placeholder="China Town 25 Street" autocomplete="shipping address-line2">
+        </label>
+        <label for="city">City
+          <input id="city" type="city" required autocomplete="shipping address-level2">
+        </label>
+        <label for="state">State/Province
+          <input id="state" type="state" required autocomplete="shipping address-level1">
+        </label>
+        <label for="postal-code">Postal Code
+          <input id="postal-code" type="zip" required autocomplete="shipping postal-code">
+        </label>
+        <label for="coutry">Country
+          <input id="country" type="country" required autocomplete="shipping country">
+        </label>
 
-      <label for="emailAdress">Email Address
-        <input id="emailAdress" placeholder="name@example.com" type="email" required autocomplete="email">
-      </label>
+        <label for="emailAdress">Email Address
+          <input id="emailAdress" placeholder="name@example.com" type="email" required autocomplete="email">
+        </label>
 
-      <label for="mailing-list">Put me on the mailing list?
-        <input id="mailing-list" class="inline checkbox" type="checkbox">
-      </label>
+        <label for="mailing-list">Put me on the mailing list?
+          <input id="mailing-list" class="inline checkbox" type="checkbox">
+        </label>
 
-      <label for="emailAdress">Phone Number
-        <input id="emailAdress" placeholder="809-555-5555" type="tel" required autocomplete="email">
-      </label>
+        <label for="emailAdress">Phone Number
+          <input id="emailAdress" placeholder="809-555-5555" type="tel" required autocomplete="email">
+        </label>
 
-      <h3>Your Credit Card Information</h3>
-      <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
-      <label for="card-number">Credit Card Number
-        <input id="card-number" type="cardnumber" maxlength="19" required placeholder="29514524578524" pattern="[0-9] {13,16}" autocomplete="cc-number">
-      </label>
-      <label for="card-type">Credit Card Type
-        <input id="card-type" list="cardTypeList" type="card-type" required>
-        <datalist id="cardTypeList">
-          <option value="Visa">
-          <option value="American Express">
-          <option value="Mastercard">
-          <option value="Discover">
-        </datalist>
-      </label>
-      <label for="expiration-date">Expiration Date
-        <input id="expiration-date" type="month" placeholder="MM/YY" required autocomplete="cc-exp">
-      </label>
-      <label for="cvv">CVV
-        <input id="cvv" type="cvc" required placeholder="111" autocomplete="cc-csc">
-      </label>
+        <h3>Your Credit Card Information</h3>
+        <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+        <label for="card-number">Credit Card Number
+          <input id="card-number" type="cardnumber" maxlength="19" required placeholder="29514524578524" pattern="[0-9] {13,16}" autocomplete="cc-number">
+        </label>
+        <label for="card-type">Credit Card Type
+          <input id="card-type" list="cardTypeList" type="card-type" required>
+          <datalist id="cardTypeList">
+            <option value="Visa">
+            <option value="American Express">
+            <option value="Mastercard">
+            <option value="Discover">
+          </datalist>
+        </label>
+        <label for="expiration-date">Expiration Date
+          <input id="expiration-date" type="month" placeholder="MM/YY" required autocomplete="cc-exp">
+        </label>
+        <label for="cvv">CVV
+          <input id="cvv" type="cvc" required placeholder="111" autocomplete="cc-csc">
+        </label>
 
-      <h3>Your Billing Address</h3>
-      <label for="shippingFullname">Full Name
-        <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
-      </label>
+        <label for="different-BA" class="check-correct"> Use different Billing Adress?
+          <input id="different-BA" type="checkbox" class="checkbox">
+        </label>
 
-      <label for="bill-company">Company
-        <input id="bill-company" placeholder="Company CxA" type="text" required autocomplete="name">
-      </label>
-      <label for="bill-addressLine1">Address Line 1
-        <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line1">
-      </label>
-      <labe for="addressLine1"l>Address Line 2
-        <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line2">
-      </label>
-      <label for="bill-city"l>City
-        <input id="bill-city" type="city" required autocomplete="billing address-level2">
-      </label>
-      <label for="bill-state">State/Province
-        <input id="bill-state" type="state" required autocomplete="billing address-level1">
-      </label>
-      <label for="bill-postal-code">Postal Code
-        <input id="bill-postal-code" type="zip" required autocomplete="billing postal-code">
-      </label>
-      <label for="bill-coutry">Country
-        <input id="bill-country" type="country" required autocomplete="billing country">
-      </label>
-      <input id="submit" type="submit">
+        <section id="billing-address">
+          
+          <h3>Your Billing Address</h3>
+          <label for="shippingFullname">Full Name
+            <input id="shippingFullname" placeholder="Full name" type="text" required autocomplete="name">
+          </label>
+
+          <label for="bill-company">Company
+            <input id="bill-company" placeholder="Company CxA" type="text" required autocomplete="name">
+          </label>
+          <label for="bill-addressLine1">Address Line 1
+            <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line1">
+          </label>
+          <labe for="addressLine1"l>Address Line 2
+            <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line2">
+          </label>
+          <label for="bill-city"l>City
+            <input id="bill-city" type="city" required autocomplete="billing address-level2">
+          </label>
+          <label for="bill-state">State/Province
+            <input id="bill-state" type="state" required autocomplete="billing address-level1">
+          </label>
+          <label for="bill-postal-code">Postal Code
+            <input id="bill-postal-code" type="zip" required autocomplete="billing postal-code">
+          </label>
+          <label for="bill-coutry">Country
+            <input id="bill-country" type="country" required autocomplete="billing country">
+          </label>
+        </section>
+        <input id="submit" type="submit">
+      </section>
     </section>
-
+   <script type="text/javascript" src="app.js"></script>
    </form> 
-  <script>
-    var submit = document.querySelector('#submit');
-    submit.onclick = function () {
-      alert("All of your information was valid, right? I'll just go ahead and assume that it is ;)\n\nThanks for your submission!");
-    };
-  </script>
+  
 </body>
 </html>

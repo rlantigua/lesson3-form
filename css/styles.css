@@ -158,3 +158,11 @@ tr:nth-child(even) {
 section.form input.checkbox {
   display: inline;
 }
+
+#your-info, #billing-address {
+  display: none;
+}
+
+#billing-address {
+  padding: 0;
+}
