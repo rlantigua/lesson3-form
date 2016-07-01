@@ -13,6 +13,18 @@ jQuery(document).ready(function() {
     hideOrShowSection('#different-BA', '#billing-address');
   });
 
+  //jQuery('#my-form').validate();
+  // var currentInputValue = '';
+
+  // jQuery('input').focusin(function() {
+  //   currentInputValue = jQuery(this).val();
+  // }).focusout(function() {
+  //   if(!jQuery(this).is(':checkbox') && jQuery(this).val() !== '') {
+  //     var progressValue = parseInt(jQuery('progress').val());
+  //     progressValue = 
+  //   }
+  // });
+
   function hideOrShowSection(checkboxElSelector, sectionSelector) {
     var section = jQuery(sectionSelector);
     if(jQuery(checkboxElSelector).prop('checked') === true){

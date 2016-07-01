@@ -31,15 +31,18 @@ label {
   margin-right: 20px;
 }
 
-.progress-bar {
-  position: fixed;
-  margin-top: 50px;
+.progress-bar-container {
+  position: absolute;
+  top: 50px;
   width: 100%;
-  height: 50px;
-  background: #fc9;
-  font-size: 1.5em;
-  font-style: italic;
-  text-align: center;
+  height: 25px;
+}
+.progress-bar-container label {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
 }
 
 section.form, section.order-review{
@@ -51,6 +54,7 @@ section.form, section.order-review{
 
 section.form {
   /*font-size: 2em;*/
+  position: relative;
 }
 
 section.form input {
