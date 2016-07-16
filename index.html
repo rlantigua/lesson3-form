@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
 
 </head>
 <body>
@@ -18,7 +17,7 @@
   <section class="form">
     <div class="progress-bar-container">
       <label>Form Progress Bar</label>
-      <progress value="0" max="15" class="progress-bar"></progress>
+      <progress value="0" max="100" class="progress-bar"></progress>
     </div>
     <form  id="my-form">
       <section>
@@ -118,7 +117,7 @@
               <input id="bill-company" placeholder="Company CxA" type="text" required autocomplete="name">
             </label>
             <label for="bill-addressLine1">Address Line 1
-              <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line1">
+              <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" required autocomplete="billing address-line1">
             </label>
             <labe for="addressLine1"l>Address Line 2
               <input id="bill-addressLine1" type="address" placeholder="China Town 25 Street" autocomplete="billing address-line2">

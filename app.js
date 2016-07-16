@@ -13,17 +13,67 @@ jQuery(document).ready(function() {
     hideOrShowSection('#different-BA', '#billing-address');
   });
 
-  //jQuery('#my-form').validate();
-  // var currentInputValue = '';
+  var previousInputValue = '';
+  var numberOfRquiredFields = 13;
+  var offset = 100 / numberOfRquiredFields;
 
-  // jQuery('input').focusin(function() {
-  //   currentInputValue = jQuery(this).val();
-  // }).focusout(function() {
-  //   if(!jQuery(this).is(':checkbox') && jQuery(this).val() !== '') {
-  //     var progressValue = parseInt(jQuery('progress').val());
-  //     progressValue = 
-  //   }
+  jQuery('input').focusin(function() {
+    console.log('in');
+
+    if(!jQuery(this).is(':checkbox')) {
+      previousInputValue = jQuery(this).val();
+      console.log(previousInputValue);
+    }
+  });
+
+  // jQuery('#different-BA').on('click', function(){
+  //   numberOfRquiredFields = numberOfRquiredFields == 13 ? 20 : 13;
+  //   var offset = 100 / numberOfRquiredFields;
+
+  //   var progressValue = parseInt(jQuery('progress').val());
+
+  //       if(inputValue === '') {
+  //         progressValue = progressValue - offset;
+  //       } else if (previousInputValue === '') {
+  //         progressValue = progressValue + offset
+  //       }
   // });
+      
+  jQuery('input').focusout(function() {
+    var inputValue = jQuery(this).val();
+    offset = 100 / numberOfRquiredFields;
+
+    if($(this).prop('required')) {
+
+      if(!jQuery(this).is(':checkbox') && inputValue !== previousInputValue) {
+        var progressValue = parseInt(jQuery('progress').val());
+
+        if(inputValue === '') {
+          progressValue = progressValue - offset;
+        } else if (previousInputValue === '') {
+          progressValue = progressValue + offset
+        }
+        jQuery('progress').attr('value', progressValue);
+      }
+    }
+  });
+
+  // jQuery('#different-BA').on('click', function() {
+  //   numberOfRquiredFields = numberOfRquiredFields === 13 ? 20 : 13;
+  //   offset = 100 / numberOfRquiredFields;
+  //   var progressValue = parseInt(jQuery('progress').val());
+
+  //   jQuery('#billing-address').find('input').each(function() {
+  //     if($(this).prop('required') && jQuery(this.val() !== '')) {
+  //       progressValue = progressValue - offset;
+  //     }
+  //   });
+  //   jQuery('progress').attr('value', progressValue);
+  // });
+
+  function handleProgressBar() {
+
+  }
 
   function hideOrShowSection(checkboxElSelector, sectionSelector) {
     var section = jQuery(sectionSelector);
@@ -34,3 +84,4 @@ jQuery(document).ready(function() {
     }
   }
 })
+8093276778
