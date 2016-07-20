@@ -15,6 +15,7 @@ jQuery(document).ready(function() {
 
   var previousInputValue = '';
   var numberOfRquiredFields = 13;
+  var progressBarMax = 91;
   var offset = 100 / numberOfRquiredFields;
 
   jQuery('input').focusin(function() {
@@ -26,19 +27,7 @@ jQuery(document).ready(function() {
     }
   });
 
-  // jQuery('#different-BA').on('click', function(){
-  //   numberOfRquiredFields = numberOfRquiredFields == 13 ? 20 : 13;
-  //   var offset = 100 / numberOfRquiredFields;
-
-  //   var progressValue = parseInt(jQuery('progress').val());
-
-  //       if(inputValue === '') {
-  //         progressValue = progressValue - offset;
-  //       } else if (previousInputValue === '') {
-  //         progressValue = progressValue + offset
-  //       }
-  // });
-      
+    
   jQuery('input').focusout(function() {
     var inputValue = jQuery(this).val();
     offset = 100 / numberOfRquiredFields;
@@ -57,22 +46,31 @@ jQuery(document).ready(function() {
       }
     }
   });
-
-  // jQuery('#different-BA').on('click', function() {
-  //   numberOfRquiredFields = numberOfRquiredFields === 13 ? 20 : 13;
-  //   offset = 100 / numberOfRquiredFields;
-  //   var progressValue = parseInt(jQuery('progress').val());
-
-  //   jQuery('#billing-address').find('input').each(function() {
-  //     if($(this).prop('required') && jQuery(this.val() !== '')) {
-  //       progressValue = progressValue - offset;
-  //     }
-  //   });
-  //   jQuery('progress').attr('value', progressValue);
-  // });
+ 
+  jQuery('#different-BA').on('click', function(){
+    numberOfRquiredFields = numberOfRquiredFields === 13 ? 20 : 13;
+    progressBarMax = progressBarMax === 91 ? 100 : 91;
+    handleProgressBar();
+  });
 
   function handleProgressBar() {
+      var offset = 100 / numberOfRquiredFields;
+      var progressValue = 0;
+      jQuery('input:visible').each(function() {
+          var inputValue = jQuery(this).val();
+          if(jQuery(this).prop('required')) {
+            console.log('dentro');
+            if(isNotCheckBox(this) && inputValue !== '') {
+              progressValue = progressValue + offset;
+            }
+          }
+      });
+      console.log(progressValue);
+      jQuery('progress').attr('value', progressValue);
+  }
 
+  function isNotCheckBox(selector) {
+    return !jQuery(selector).is(':checkbox');
   }
 
   function hideOrShowSection(checkboxElSelector, sectionSelector) {
@@ -84,4 +82,3 @@ jQuery(document).ready(function() {
     }
   }
 })
-8093276778
